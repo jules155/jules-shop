@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>JULES'S SHOP</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#f4f4f4;
+}
+
+header{
+  background:#0d6efd;
+  color:white;
+  padding:20px;
+  text-align:center;
+}
+
+nav{
+  background:#003f88;
+  padding:15px;
+  text-align:center;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:15px;
+  font-weight:bold;
+}
+
+.container{
+  width:90%;
+  margin:auto;
+  padding:30px 0;
+}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 2px 5px rgba(0,0,0,0.2);
+  text-align:center;
+}
+
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+.card h3{
+  margin:15px 0;
+}
+
+.price{
+  color:green;
+  font-size:20px;
+  margin-bottom:10px;
+}
+
+button{
+  background:#0d6efd;
+  color:white;
+  border:none;
+  padding:10px 15px;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#084298;
+}
+
+.login-box{
+  background:white;
+  width:300px;
+  margin:40px auto;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 2px 5px rgba(0,0,0,0.2);
+}
+
+.login-box input{
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+}
+
+footer{
+  background:#003f88;
+  color:white;
+  text-align:center;
+  padding:20px;
+  margin-top:40px;
+}
+
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:15px 20px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+  <h1>JULES'S SHOP</h1>
+  <p>Murakaza neza muri JULES'S SHOP</p>
+</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#">Products</a>
+  <a href="#">Login</a>
+  <a href="#">Contact</a>
+</nav>
+
+<div class="login-box">
+  <h2 style="text-align:center;">Login</h2>
+
+  <input type="text" placeholder="User Name">
+  <input type="password" placeholder="Password">
+
+  <button style="width:100%;">Injira</button>
+</div>
+
+<div class="container">
+
+<h2 style="text-align:center; margin-bottom:30px;">
+Products
+</h2>
+
+<div class="products">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="shoe">
+<h3>Nice Shoes</h3>
+<p class="price">50,000 Frw</p>
+<button onclick="buyNow('Nice Shoes','50,000')">
+Pay Now
+</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" alt="watch">
+<h3>Watch</h3>
+<p class="price">50,000 Frw</p>
+<button onclick="buyNow('Watch','50,000')">
+Pay Now
+</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" alt="phone">
+<h3>Machine</h3>
+<p class="price">120,000 Frw</p>
+<button onclick="buyNow('Machine','120,000')">
+Pay Now
+</button>
+</div>
+
+</div>
+</div>
+
+<footer>
+<p>&copy; 2026 JULES'S SHOP</p>
+</footer>
+
+<a class="whatsapp"
+href="https://wa.me/250794281486"
+target="_blank">
+WhatsApp
+</a>
+
+<script>
+function buyNow(product, price){
+
+let phone = "250794281486";
+
+let message =
+"Muraho, ndashaka kugura:%0A%0A" +
+"Product: " + product + "%0A" +
+"Igiciro: " + price + " Frw";
+
+let whatsappURL =
+"https://wa.me/" + phone +
+"?text=" + encodeURIComponent(message);
+
+window.open(whatsappURL, "_blank");
+
+}
+</script>
+
+</body>
+</html>
